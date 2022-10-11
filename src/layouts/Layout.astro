@@ -1,0 +1,63 @@
+---
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+		<footer>
+			Site built by <a href="https://ximenavf.com">Ximena Vila Ferral</a>. Using 	<a href="https://astro.build">Astro.</a>
+		</footer>
+	</body>
+</html>
+<style is:global>
+	:root {
+		--accent: 164, 199, 91;
+		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #8bba07 30%, white 60%);
+		--primary-color: #0A1739;
+		--backround-color: #0B233F;
+		--accent-color: #A4C747;
+		--accent-color-alternate: #F15A22;
+
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		background-color: var(--backround-color);
+		color: #ffffff;
+	}
+
+	body {
+		margin: 0;
+	}
+
+	code {
+		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+			Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+
+	footer {
+		margin: 3rem 0 0;
+		text-align: center;
+		color: var(--primary-color);
+		background-color: var(--accent-color);
+		padding: 1rem;
+		font-weight: bold;
+		font-size: .9rem;
+	}
+	
+	footer a {
+		color: var(--primary-color);
+	}
+</style>

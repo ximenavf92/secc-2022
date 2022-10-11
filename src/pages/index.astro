@@ -1,0 +1,184 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<section class="intro-hero">
+			<div class="heading-box">
+				<img src="images/secc-logo.svg" alt="" width="200" height="auto">
+				<div class="heading-text-box">
+					<h1>
+						<span>2022 State Employee Charitable Campaign</span>
+					</h1>
+					<p class="subheading">September 19th - 22nd</p>
+				</div>
+			</div>
+
+			<div class="info-box">
+				<h2>University <br>Relations</h2>
+					<div class="participation">
+						<p class="stat">
+							<span>77.4%</span>
+							Participation
+						</p>
+					</div>
+					<div class="donation">
+						<p class="stat">
+							<span>$3,865</span>
+							Total Pledge
+						</p>
+					</div>
+			</div>
+		</section>
+		<h3>Quotes from the team</h3>
+		<ul role="list" class="quote-card-grid">
+			<Card image="/images/quotes/secc-quote-teresa-1.jpg" />
+			<Card image="/images/quotes/secc-quote-anne-1.jpg" />
+			<Card image="/images/quotes/secc-quote-brandon-1.jpg" />
+			<Card image="/images/quotes/secc-quote-brett-1.jpg" />
+			<Card image="/images/quotes/secc-quote-brett-2.jpg" />
+			<Card image="/images/quotes/secc-quote-christi-1.jpg" />
+			<Card image="/images/quotes/secc-quote-david-1.jpg" />
+			<Card image="/images/quotes/secc-quote-dogs-1.jpg" />
+			<Card image="/images/quotes/secc-quote-drew_shashi.jpg" />
+			<Card image="/images/quotes/secc-quote-drew-1.jpg" />
+			<Card image="/images/quotes/secc-quote-elvira-1.jpg" />
+			<Card image="/images/quotes/secc-quote-jeremiah-1.jpg" />
+			<Card image="/images/quotes/secc-quote-joan-1.jpg" />
+			<Card image="/images/quotes/secc-quote-katia-1.jpg" />
+			<Card image="/images/quotes/secc-quote-mal-1.jpg" />
+			<Card image="/images/quotes/secc-quote-margaret-1.jpg" />
+			<Card image="/images/quotes/secc-quote-mitzi-1.jpg" />
+			<Card image="/images/quotes/secc-quote-rosemary-1.jpg" />
+			<Card image="/images/quotes/secc-quote-shashi-1.jpg" />
+			<Card image="/images/quotes/secc-quote-shea-1.jpg" />
+			<!-- <Card href="https://docs.astro.build/" title="Documentation"
+				body="Learn how Astro works and explore the official API docs." /> -->
+		</ul>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: 2rem auto 0;
+		padding: 1.5rem;
+		max-width: 100ch;
+	}
+
+	h1 {
+		font-size: 2.25rem;
+		font-weight: 800;
+		margin: 0;
+		text-align: center;
+	}
+
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+
+	.heading-box {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 2rem;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.subheading {
+		font-size: 1.5rem;
+		margin: .75rem 0;
+		text-align: center;
+	}
+	
+	.info-box {
+		color: var(--primary-color);
+		background-color: #ffffff;
+		margin: 4rem 0 5rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		gap: 1rem 2rem;
+		border: solid 3px #ffffff95;
+		border-radius: 1rem;
+		padding: 2rem;
+		box-shadow: 10px 8px 8px var(--primary-color);
+	}
+	
+	h2 {
+		font-size: 3rem;
+		margin: 0;
+		text-align: center;
+	}
+
+	.stat {
+		text-align: center;
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: 0.35em;
+	}
+	
+	.stat span {
+		display: block;
+		font-weight: bolder;
+		font-size: 4rem;
+		letter-spacing: 0;
+		margin-bottom: .075em;
+		/* color: var(--accent-color); */
+		color: #0D8443;
+	}
+
+	h3 {
+		color: var(--primary-color);
+		padding: 1em 1.5em;
+		border-radius: 1rem;
+		width: max-content;
+		background-color: var(--accent-color);
+		font-size: 1.75rem;
+		letter-spacing: 0.05rem;
+		margin: 3rem auto 3rem;
+		text-align: center;
+		transform: rotate(-2deg);
+		transition: .25s ease-in-out;
+		box-shadow: 8px 8px 8px var(--primary-color);
+	}
+
+	h3:hover {
+		transform: rotate(0deg);
+	}
+
+	.instructions {
+		line-height: 1.6;
+		margin: 1rem 0;
+		border: 1px solid rgba(var(--accent), 25%);
+		background-color: white;
+		padding: 1rem;
+		border-radius: 0.4rem;
+	}
+
+	.instructions code {
+		font-size: 0.875em;
+		font-weight: bold;
+		background: rgba(var(--accent), 12%);
+		color: rgb(var(--accent));
+		border-radius: 4px;
+		padding: 0.3em 0.45em;
+	}
+
+	.instructions strong {
+		color: rgb(var(--accent));
+	}
+
+	.quote-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+</style>
